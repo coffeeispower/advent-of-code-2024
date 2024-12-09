@@ -1,0 +1,19 @@
+{
+  "name": "advent-of-code-2024",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "day": "bun run ./solution-runner.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "typescript-language-server": "^4.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
+}
