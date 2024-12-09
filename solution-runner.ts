@@ -14,7 +14,7 @@ export function readInput(
 export function runSolution(
     filename: string,
     part1: (input: string) => number,
-    part2?: (input: string) => number,
+    part2?: (input: string) => number | undefined,
 ): void {
     const input = readInput(filename);
     console.log("---------------------------------");
@@ -22,9 +22,10 @@ export function runSolution(
     console.log(`Part 1: ${part1(input)}`);
     console.timeEnd("part1");
     console.log("---------------------------------");
-    if (part2) {
+    const part2Output = part2?.(input);
+    if (part2Output != null) {
         console.time("part2");
-        console.log(`Part 2: ${part2(input)}`);
+        console.log(`Part 2: ${part2Output}`);
         console.timeEnd("part2");
     } else {
         console.warn("Part 2: Not implemented yet");
