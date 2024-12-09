@@ -15,22 +15,18 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// },
-	"Boilerplate for day part 1": {
+	"Boilerplate for day": {
 		"scope": "typescript",
-		"prefix": "part1",
+		"prefix": "day",
 		"body": [
 			"export function part1(input: string): number {",
+			"    $1",
 			"    return 0;",
 			"}",
-		]
+			"export function part2(input: string) {",
+			"    // TODO: implement part 2",
+			"}",
+		],
+		"isFileTemplate": true
 	},
-	"Boilerplate for day part 2": {
-		"scope": "typescript",
-		"prefix": "part2",
-		"body": [
-			"export function part2(input: string): number {",
-			"    return 0;",
-			"}",
-		]
-	}
 }
