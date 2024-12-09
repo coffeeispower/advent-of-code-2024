@@ -41,7 +41,6 @@ export function part1(input: string): number {
                 columnSlice.split("").reverse().join("") === KEYWORD
             ) {
                 occurrences++;
-                console.log("   COLUMN DETECTED");
             }
         }
     }
@@ -72,32 +71,14 @@ export function part1(input: string): number {
                 diagonal1WordChars.join("") === KEYWORD ||
                 diagonal1WordChars.toReversed().join("") === KEYWORD
             ) {
-                console.log("   DIAGONAL DETECTED (1)");
-                console.log();
                 occurrences++;
             }
             if (
                 diagonal2WordChars.join("") === KEYWORD ||
                 diagonal2WordChars.toReversed().join("") === KEYWORD
             ) {
-                console.log("   DIAGONAL DETECTED (2)");
-                console.log();
                 occurrences++;
             }
-            const window = matrix
-                .slice(windowPositionY, windowPositionY + KEYWORD.length)
-                .map((line) =>
-                    line.slice(
-                        windowPositionX,
-                        windowPositionX + KEYWORD.length,
-                    ),
-                );
-            for (const line of window) {
-                console.log("       ", line.join(" "));
-            }
-            console.log();
-            console.log();
-            console.log("--------------------------------------");
         }
     }
     return occurrences;
